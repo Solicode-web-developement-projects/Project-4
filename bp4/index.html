@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoliClubs</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav>
+        <h2>{SoliCode}</h2>
+        <ul>
+            <li><a href="#Inscription">Inscription</a></li>
+            <li><a href="#Donnés">Donnés</a></li>
+            <li><a href="#Statistiques">Statistiques</a></li>
+        </ul>
+    </nav>
+    <header>
+        <h1>Welcome to SoliCode <br>Clubs</h1>
+    </header>
+    <section class="inscriptionSection">
+        <h1 id="Inscription">Inscription</h1>
+        <div class="container" id="container">
+            <form action="" class="form1" id="form1">
+                <h2>Step 1</h2>
+                <input type="text" placeholder="Nom" name="Nom"><br>
+                <input type="text" placeholder="Prénom" name="Prénom"><br>
+                <input type="text" placeholder="example@ofppt.ma" name="Email"><br>
+                <div>
+                    <label for="">Homme</label>
+                    <input type="radio" name="genre" value="H">
+                </div>
+                <div>
+                    <label for="">Femme</label>
+                    <input type="radio" name="genre" value="F">
+                </div>
+                <input type="button" value="Suivant" onclick="nextFunct()">
+            </form>
+
+            <form action="" class="form2" id="form2">
+                <h2>Step 2</h2>
+                <select name="filiere" id="filiere" onchange="changeFunction()">
+                    <option value="Web">Web</option>
+                    <option value="Mobile">Mobile</option>
+                </select><br>
+                <p id="ereurMessage"></p>
+                <select name="groups" id="groups">
+                    <option value="GW1">GW1</option>
+                    <option value="GW2">GW2</option>
+                    <option value="GW3">GW3</option>
+                    <option value="GW4">GW4</option>
+                </select><br>
+                <div class="positionOfCheckboxes">
+                    <div class="labels">
+                        <label for="">Club IA</label>
+                        <label for="">Club Hackathon</label>
+                        <label for="">Club Musique</label>
+                        <label for="">Club Sport</label>
+                    </div>
+                    <div class="checkboxs">
+                        <input type="checkbox" value="Club IA">
+                        <input type="checkbox" value="Club Hackathon">
+                        <input type="checkbox" value="Club Musique">
+                        <input type="checkbox" value="Club Sport">
+                    </div>
+                </div>
+                <div class="botns">
+                    <input type="button" value="Anuler" onclick="backFunct()">
+                    <input type="button" value="Ajouter" onclick="addFunction()">
+                </div>
+            </form>
+        </div>
+    </section>
+    <section>
+        <h1 id="Donnés">Donnés</h1>
+        <table id="table">
+            <tr>
+                <th>Nom</th>
+                <th>Prénom</th>
+                <th>Genre</th>
+                <th>Email</th>
+                <th>Filére</th>
+                <th>Groupe</th>
+                <th>Club</th>
+            </tr>
+
+        </table>
+    </section>
+    <section>
+        <h1 id="Statistiques">Statistiques</h1>
+        <article>
+            <h2 id="Totale">0</h2>
+            <h3>Totale Inscris</h3>
+            <div class="calcule">
+                <div class="GenreEtFiliere">
+                    <div class="columnOfBar">
+                        <span class="bars" id="hommeBar"></span>
+                        <h3 id="hommeResult"></h3>
+                        <h3>Homme </h3>
+                    </div>
+                    <div class="columnOfBar">
+                        <span class="bars" id="femmeBar"></span>
+                        <h3 id="femmeResult"></h3>
+                        <h3>Femme</h3>
+                    </div>
+                </div>
+                <div class="GenreEtFiliere" id="WebMobile">
+                    <div class="columnOfBar" id="webColumns">
+                        <span class="bars" id="mobileBar"></span>
+                        <h3 id="mobileResult"></h3>
+                        <h3>Mobile</h3>
+                    </div>
+                    <div class="columnOfBar" id="webColumns">
+                        <span class="bars" id="webBar"></span>
+                        <h3 id="webResult"></h3>
+                        <h3>Web</h3>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
